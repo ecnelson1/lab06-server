@@ -7,7 +7,7 @@ app.use(cors());
 app.get('/cast', (req,res) => {
     res.json({hellCast});
 });
-app.get('/cast:name', (req,res) => {
+app.get('/cast:id', (req,res) => {
     const name = Number(req.params.id);
     const chosenCast = hellCast.find(castMember => castMember.id===id);
     res.json({chosenCast})
