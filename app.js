@@ -12,7 +12,7 @@ app.get('/cast', (req,res) => {
     console.log('hellCast', hellCast);
     res.json({hellCast});
 });
-app.get('/cast:id', (req,res) => {
+app.get('/cast/:id', (req,res) => {
     const id = Number(req.params.id);
     const chosenCast = hellCast.find((character) => character.id === id);
     res.json({chosenCast})
