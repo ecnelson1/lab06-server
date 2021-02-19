@@ -9,12 +9,11 @@ const { hellCast } = require('./data.js');
 app.use(cors());
 
 app.get('/cast', (req,res) => {
-    console.log('hellCast', hellCast);
     res.json({hellCast});
 });
 app.get('/cast/:id', (req,res) => {
     const id = Number(req.params.id);
     const chosenCast = hellCast.find((character) => character.id === id);
-    res.json({chosenCast})
+    res.json(chosenCast)
 });
 module.exports = { app }
