@@ -69,7 +69,5 @@ const hellCast = [
     is_divine: false,
     type: "Human (Prior-Immortal)"
 }];
-module.exports = {
-    hellCast
-}
+module.exports = { hellCast };
 
